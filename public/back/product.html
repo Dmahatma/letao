@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +10,6 @@
     <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
     <link rel="stylesheet" href="./css/common.css">
 </head>
-
 <body>
     <!-- 侧边栏 -->
     <div class="lt_aside">
@@ -44,7 +42,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="product.html">
+                    <a href="product.html" class="current">
                         <i class="glyphicon glyphicon-tags"></i>
                         <span>商品管理</span>
                     </a>
@@ -70,10 +68,6 @@
                 <li class="active">首页</li>
             </ol>
             <!-- 图表 -->
-            <div class="lt_content">
-                <div class="echarts_left pull-left"></div>
-                <div class="echarts_right pull-right"></div>
-            </div>
         </div>
     </div>
 
@@ -83,23 +77,23 @@
        2. modal-sm  小模态框
        外层蒙层, 内层模态框, 类加给内层
   -->
-    <div class="modal fade" tabindex="-1" id="logoutModal">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
+    <div class="modal fade" tabindex="-1" id="logoutModal" >
+            <div class="modal-dialog modal-sm" >
+              <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-                    <h4 class="modal-title">温馨提示</h4>
+                  <button type="button" class="close" data-dismiss="modal" ><span >&times;</span></button>
+                  <h4 class="modal-title">温馨提示</h4>
                 </div>
                 <div class="modal-body">
-                    <p class="red"><i class="glyphicon glyphicon-info-sign"></i>您确定要退出后台管理系统吗？</p>
+                  <p class="red"><i class="glyphicon glyphicon-info-sign"></i>您确定要退出后台管理系统吗？</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary" id="logoutBtn">退出</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                  <button type="button" class="btn btn-primary" id="logoutBtn">退出</button>
                 </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
 
 
     <script src="./lib/jquery/jquery.min.js"></script>
@@ -111,5 +105,4 @@
     <script src="./js/isLogin.js"></script>
     <script src="./js/index.js"></script>
 </body>
-
 </html>

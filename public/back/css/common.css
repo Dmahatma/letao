@@ -1,12 +1,166 @@
+/* 重置默认样式 */
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.red {
+    color: #A94442;
+}
+
 .body_bg {
     background-color: #222D32;
 }
+
 .mt_150 {
     margin-top: 150px;
 }
+
+.mt_20 {
+    margin-top: 20px;
+}
+
 .panel-title {
     height: 40px;
-    line-height:40px;
+    line-height: 40px;
     font-size: 20px;
     text-align: center;
+}
+
+/* index页面的侧边栏 */
+.lt_aside {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 180px;
+    background-color: #222D32;
+    /* 被le_main的头部覆盖 -> 提升层级 */
+    z-index: 999;
+    /* 添加动画过渡 */
+    transition: all 1s;
+}
+
+.lt_aside.hidemenu {
+    left: -180px;
+}
+
+.lt_aside .brand {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #367FA9;
+    font-size: 24px;
+
+}
+
+.lt_aside .brand a {
+    color: #fff;
+}
+
+.lt_aside .user {
+    height: 180px;
+    padding-top: 30px;
+}
+
+.lt_aside .user img {
+    width: 80px;
+    height: 80px;
+    /* 转换成块级元素 -> margin 居中 */
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.lt_aside .user p {
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.lt_aside .nav a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    padding-left: 40px;
+    /* 未点击时左边框透明不显示 */
+    border-left: 3px solid transparent;
+}
+
+.lt_aside .nav a.current {
+    background-color: #1D1F21;
+    border-left: 3px solid #069;
+}
+
+/* 点击跳转到该页面时左边框高亮显示 */
+.lt_aside .nav a i {
+    margin-right: 5px;
+}
+
+.lt_aside .nav .child a {
+    padding-left: 60px;
+}
+
+.lt_aside .nav .child {
+    display: none;
+}
+
+.lt_main {
+    height: 2000px;
+    padding-top: 50px;
+    padding-left: 180px;
+    /* 添加过渡 */
+    transition: all 1s;
+}
+
+.lt_main.hidemenu {
+    padding-left: 0px;
+}
+
+.lt_topbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #3C8DBC;
+    padding-left: 180px;
+    /* 添加过渡 */
+    transition: all 1s;
+}
+
+.lt_topbar.hidemenu {
+    padding-left: 0px;
+}
+
+.lt_topbar a {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+.lt_main .breadcrumb a {
+    color: #337AB7;
+}
+/* 在绘图前我们需要为 ECharts 准备一个具备高宽的 DOM 容器 */
+.lt_main .echarts_left,
+.lt_main .echarts_right {
+    width: 48%;
+    height:400px;
+    /* background-color: red; */
 }
