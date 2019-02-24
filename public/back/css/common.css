@@ -164,3 +164,9 @@ ul {
     height:400px;
     /* background-color: red; */
 }
+/* user页面中表格水平垂直居中 */
+.table.table-bordered th,
+.table.table-bordered td {
+    text-align:center;
+    vertical-align:center;
+}
